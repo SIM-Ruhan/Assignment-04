@@ -132,10 +132,10 @@ function renderTotal(){
     if(allCardSection.children.length === 0){
 
     allCardSection.innerHTML = `
-        <div class="text-center mt-10">
-            <i class="fa-solid fa-briefcase text-4xl text-gray-400"></i>
-            <p class="mt-4 font-bold">No jobs available</p>
-            <p class="text-gray-500">There is no jobs yet.</p>
+        <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+            <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
+            <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
+            <p class="text-gray-500">Check back soon for new job opportunities</p>
         </div>
     `;
     return;
@@ -145,10 +145,10 @@ function renderTotal(){
 function renderInterview(){
     if(interviewList.length === 0){
     filteredSection.innerHTML = `
-        <div class="text-center mt-10">
-            <i class="fa-solid fa-briefcase text-4xl text-gray-400"></i>
-            <p class="mt-4 font-bold">No jobs available</p>
-            <p class="text-gray-500">You haven't selected any jobs yet.</p>
+       <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+            <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
+            <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
+            <p class="text-gray-500">Check back soon for new job opportunities</p>
         </div>
     `;
     return;
@@ -191,10 +191,10 @@ filteredSection.appendChild(div);
 function renderRejected(){
     if(rejectedList.length === 0){
     filteredSection.innerHTML = `
-        <div class="text-center mt-10">
-            <i class="fa-solid fa-briefcase text-4xl text-gray-400"></i>
-            <p class="mt-4 font-bold">No jobs available</p>
-            <p class="text-gray-500">You haven't selected any jobs yet.</p>
+        <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+            <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
+            <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
+            <p class="text-gray-500">Check back soon for new job opportunities</p>
         </div>
     `;
     return;
