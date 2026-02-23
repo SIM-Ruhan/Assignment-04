@@ -132,7 +132,7 @@ function renderTotal(){
     if(allCardSection.children.length === 0){
 
     allCardSection.innerHTML = `
-        <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+        <div class="text-center my-10 w-[70%] shadow mx-auto py-10 sm:py-28">
             <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
             <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
             <p class="text-gray-500">Check back soon for new job opportunities</p>
@@ -145,7 +145,7 @@ function renderTotal(){
 function renderInterview(){
     if(interviewList.length === 0){
     filteredSection.innerHTML = `
-       <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+       <div class="text-center my-10 w-[70%] shadow mx-auto py-10 sm:py-28">
             <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
             <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
             <p class="text-gray-500">Check back soon for new job opportunities</p>
@@ -191,7 +191,7 @@ filteredSection.appendChild(div);
 function renderRejected(){
     if(rejectedList.length === 0){
     filteredSection.innerHTML = `
-        <div class="text-center my-10 w-[70%] shadow mx-auto py-28">
+        <div class="text-center my-10 w-[70%] shadow mx-auto py-10 sm:py-28">
             <i class="fa-solid fa-file-lines text-8xl text-[#7DA8FF]"></i>
             <p class="mt-4 text-2xl font-semibold leading-8">No jobs available</p>
             <p class="text-gray-500">Check back soon for new job opportunities</p>
