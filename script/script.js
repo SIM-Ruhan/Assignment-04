@@ -197,14 +197,14 @@ for(let interview of interviewList){
     <!-- Main Part -->
      <div class="">
       
-           <p class="cardName text-3xl font-medium">${interview.cardName}</p>
-           <p class="postName">${interview.post}</p>
-            <p class=" info my-5">${interview.info}</p>
+           <p class="cardName text-3xl font-medium text-[#002C5C]">${interview.cardName}</p>
+           <p class="postName text-[#64748B]">${interview.post}</p>
+            <p class=" info my-5 text-[#64748B]">${interview.info}</p>
             <div class="bg-gray-200 px-3 py-2 rounded-sm max-w-3/5 sm:max-w-2/5 lg:max-w-1/5 text-center mb-2">
                        <p class="status text-[#10B981] font-bold">${interview.status}</p>
             </div>
 
-       <p class="notes">${interview.notes}</p>
+       <p class="notes text-[#323B49]">${interview.notes}</p>
      </div>
     
     
@@ -243,14 +243,14 @@ for(let rejects of rejectedList){
     <!-- Main Part -->
     <div class="">
       
-           <p class="cardName text-3xl font-medium">${rejects.cardName}</p>
-           <p class="postName">${rejects.post}</p>
-            <p class=" info my-5">${rejects.info}</p>
+           <p class="cardName text-3xl font-medium text-[#002C5C]">${rejects.cardName}</p>
+           <p class="postName text-[#64748B]">${rejects.post}</p>
+            <p class=" info my-5 text-[#64748B]">${rejects.info}</p>
             <div class="bg-gray-200 px-3 py-2 rounded-sm max-w-3/5 sm:max-w-2/5 lg:max-w-1/5 text-center mb-2">
                        <p class="status text-[#EF4444] font-bold">${rejects.status}</p>
             </div>
 
-       <p class="notes">${rejects.notes}</p>
+       <p class="notes text-[#323B49]">${rejects.notes}</p>
      </div>
     
     
