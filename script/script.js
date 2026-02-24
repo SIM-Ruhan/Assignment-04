@@ -6,6 +6,7 @@ let total = document.getElementById('total');
 let interview = document.getElementById('interviewCount');
 let rejected = document.getElementById('rejectedCount');
 let jobTotal = document.getElementById('job-count');
+let Others = document.getElementById('others');
 
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
@@ -75,6 +76,9 @@ const post = parentNode.querySelector('.postName').innerText;
 const info = parentNode.querySelector('.info').innerText;
 const notes = parentNode.querySelector('.notes').innerText;
 parentNode.querySelector('.status').innerText = 'INTERVIEW';
+parentNode.querySelector('.status').classList.remove('text-[#EF4444]');
+parentNode.querySelector('.status').classList.add('text-[#10B981]');
+
 let cardinfo = {
     cardName,
     post,
@@ -98,6 +102,8 @@ const info = parentNode.querySelector('.info').innerText;
 const status = parentNode.querySelector('.status');
 const notes = parentNode.querySelector('.notes').innerText;
 parentNode.querySelector('.status').innerText = 'REJECTED';
+parentNode.querySelector('.status').classList.add('text-[#EF4444]');
+
 let cardinfo = {
     cardName,
     post,
