@@ -36,6 +36,25 @@ function refreshCurrentTab() {
     }
 }
 
+function jobHeader() {
+    const totalJobs = allCardSection.children.length;
+
+    if (currentStatus === 'all-filter-btn') {
+        Others.innerText = "";
+        jobTotal.innerText = totalJobs;
+    }
+
+    else if (currentStatus === 'interview-filter-btn') {
+        Others.innerText = interviewList.length + " of ";
+        jobTotal.innerText = totalJobs;
+    }
+
+    else if (currentStatus === 'rejected-filter-btn') {
+        Others.innerText = rejectedList.length + " of ";
+        jobTotal.innerText = totalJobs;
+    }
+}
+
 function toggleStyle(id){
     allFilterBtn.classList.remove('bg-blue-500','text-white');
 interviewFilterBtn.classList.remove('bg-blue-500','text-white');
@@ -65,10 +84,10 @@ else if(id == 'rejected-filter-btn'){
     filteredSection.classList.remove('hidden');
 renderRejected();
 }
-
+jobHeader();
 }
-mainContainer.addEventListener('click',function(event){
 
+mainContainer.addEventListener('click',function(event){
 if(event.target.classList.contains('interview-btn')){
     const parentNode = event.target.parentNode.parentNode;
 const cardName = parentNode.querySelector('.cardName').innerText;
@@ -78,6 +97,7 @@ const notes = parentNode.querySelector('.notes').innerText;
 parentNode.querySelector('.status').innerText = 'INTERVIEW';
 parentNode.querySelector('.status').classList.remove('text-[#EF4444]');
 parentNode.querySelector('.status').classList.add('text-[#10B981]');
+parentNode.querySelector('.status').classList.add('font-bold');
 
 let cardinfo = {
     cardName,
@@ -91,6 +111,7 @@ let cardinfo = {
         rejectedList = rejectedList.filter(item => item.cardName !== cardName);
         interviewList.push(cardinfo);
         calculateCount();
+        jobHeader();
         refreshCurrentTab();
 
 }
@@ -103,6 +124,7 @@ const status = parentNode.querySelector('.status');
 const notes = parentNode.querySelector('.notes').innerText;
 parentNode.querySelector('.status').innerText = 'REJECTED';
 parentNode.querySelector('.status').classList.add('text-[#EF4444]');
+parentNode.querySelector('.status').classList.add('font-bold');
 
 let cardinfo = {
     cardName,
@@ -118,6 +140,7 @@ let cardinfo = {
 
         rejectedList.push(cardinfo);
         calculateCount();
+        jobHeader();
         refreshCurrentTab();
 }
 
@@ -129,6 +152,7 @@ else if (event.target.closest('.delete-btn')) {
     rejectedList = rejectedList.filter(item => item.cardName !== cardName);
     parentNode.remove();
     calculateCount();
+    jobHeader();
     refreshCurrentTab();
     renderTotal();
 } 
@@ -177,7 +201,7 @@ for(let interview of interviewList){
            <p class="postName">${interview.post}</p>
             <p class=" info my-5">${interview.info}</p>
             <div class="bg-gray-200 px-3 py-2 rounded-sm max-w-3/5 sm:max-w-2/5 lg:max-w-1/5 text-center mb-2">
-                       <p class="status">${interview.status}</p>
+                       <p class="status text-[#10B981] font-bold">${interview.status}</p>
             </div>
 
        <p class="notes">${interview.notes}</p>
@@ -223,7 +247,7 @@ for(let rejects of rejectedList){
            <p class="postName">${rejects.post}</p>
             <p class=" info my-5">${rejects.info}</p>
             <div class="bg-gray-200 px-3 py-2 rounded-sm max-w-3/5 sm:max-w-2/5 lg:max-w-1/5 text-center mb-2">
-                       <p class="status">${rejects.status}</p>
+                       <p class="status text-[#EF4444] font-bold">${rejects.status}</p>
             </div>
 
        <p class="notes">${rejects.notes}</p>
